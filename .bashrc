@@ -120,7 +120,12 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(oh-my-posh init bash --config /home/linuxbrew/.linuxbrew/opt/oh-my-posh/themes/catppuccin_mocha.omp.json)"
 eval "$(fnm env)"
 
+# fzf setup
+eval "$(fzf --bash)"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 alias vi='nvim'
+alias py='python3'
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
