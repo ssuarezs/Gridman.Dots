@@ -124,9 +124,13 @@ eval "$(fnm env)"
 eval "$(fzf --bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-alias vi='nvim'
-alias py='python3'
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# ALIAS
+alias vi='nvim'
+alias py='python3'
+alias tf='terraform'
+alias dk='docker'
+alias dc='docker-compose'
