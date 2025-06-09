@@ -22,7 +22,9 @@ return {
 				flake8,
 
 				-- Typescript / Javascript
-				formatting.prettier,
+				formatting.prettier.with({
+          filetypes = { "svelte", "javascript", "typescript", "css", "html" }
+        }),
 				eslint_d,
 			},
 		})
