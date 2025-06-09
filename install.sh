@@ -16,13 +16,14 @@ brew update
 
 # List of packages to install
 packages=(
-  git
-  wget
+  zsh
+  zellij
   neovim
-  python
   ripgrep
+  wget
+  git
+  python
   fnm
-  jandedobbeleer/oh-my-posh/oh-my-posh
 )
 
 # Install packages

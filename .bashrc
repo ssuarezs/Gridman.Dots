@@ -134,3 +134,5 @@ alias py='python3'
 alias tf='terraform'
 alias dk='docker'
 alias dc='docker-compose'
+
+. "$HOME/.local/bin/env"
