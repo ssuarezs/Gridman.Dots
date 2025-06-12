@@ -1,13 +1,13 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate",
-	config = function()
-		local config = require("nvim-treesitter.configs")
-		config.setup({
-			auto_install = true,
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
+  config = function()
+    local config = require("nvim-treesitter.configs")
+    config.setup({
+      auto_install = true,
       ensure_installed = { "svelte", "typescript", "javascript", "html", "css", "python" },
-			highlight = { enable = true },
-			indent = { enable = true },
-		})
-	end,
+      highlight = { enable = true },
+      indent = { enable = true },
+    })
+  end,
 }

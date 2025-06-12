@@ -1,4 +1,6 @@
-
+-- vim.keymap.set("n", "<leader>sd", function()
+--   require("snacks").open("snacks.dashboard")
+-- end, { desc = "Open Snacks Dashboard" })
 
 -- Redefine Ctrl+s to save with the custom function
 vim.api.nvim_set_keymap("n", "<C-s>", ":lua SaveFile()<CR>", { noremap = true, silent = true })
@@ -22,4 +24,3 @@ function SaveFile()
     vim.notify("Error: " .. err, vim.log.levels.ERROR) -- Show the error message if it fails
   end
 end
-
