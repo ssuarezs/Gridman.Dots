@@ -14,6 +14,7 @@ return {
           "pyright",
           "omnisharp",
           "svelte",
+          "terraformls"
         },
       })
 
@@ -30,7 +31,7 @@ return {
         vim.keymap.set({ "n" }, "<leader>rn", vim.lsp.buf.rename, opts)
       end
 
-      local servers = { "lua_ls", "ts_ls", "pyright", "omnisharp", "svelte" }
+      local servers = { "lua_ls", "ts_ls", "pyright", "omnisharp", "svelte", "terraformls" }
 
       for _, server in ipairs(servers) do
         lspconfig[server].setup({
