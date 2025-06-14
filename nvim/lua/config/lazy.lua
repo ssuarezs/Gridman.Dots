@@ -18,16 +18,16 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 if vim.fn.has("wsl") == 1 then -- Fix copy and paste in WSL (Windows Subsystem for Linux)
   vim.g.clipboard = {
-    name = "win32yank", -- Use win32yank for clipboard operations
+    name = "win32yank-wsl", -- Use win32yank for clipboard operations
     copy = {
-      ["+"] = "win32yank.exe -i --crlf", -- Command to copy to the sys clipboard
-      ["*"] = "win32yank.exe -i --crlf", -- Command to copy to the prim clipboard
+      ["+"] = "/usr/local/bin/win32yank.exe -i --crlf", -- Command to copy to the sys clipboard
+      ["*"] = "/usr/local/bin/win32yank.exe -i --crlf", -- Command to copy to the prim clipboard
     },
     paste = {
-      ["+"] = "win32yank.exe -o --lf", -- Command to paste from the sys clipboard
-      ["*"] = "win32yank.exe -o --lf", -- Command to paste from the prim clipboard
+      ["+"] = "/usr/local/bin/win32yank.exe -o --lf", -- Command to paste from the sys clipboard
+      ["*"] = "/usr/local/bin/win32yank.exe -o --lf", -- Command to paste from the prim clipboard
     },
-    cache_enabled = false, -- Disable clipboard caching
+    cache_enabled = 0, -- Disable clipboard caching
   }
 end
 
