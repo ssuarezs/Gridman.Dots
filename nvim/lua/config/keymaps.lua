@@ -5,12 +5,6 @@
 -- Redefine Ctrl+s to save with the custom function
 vim.api.nvim_set_keymap("n", "<C-s>", ":lua SaveFile()<CR>", { noremap = true, silent = true })
 
--- yank
-if vim.fn.has("wsl") == 1 then
-  vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank to Windows clipboard" })
-  vim.keymap.set("n", "<leader>Y", '"+yy', { desc = "Yank line to Windows clipboard" })
-end
-
 -- Custom save function
 function SaveFile()
   -- Check if a buffer with a file is open
